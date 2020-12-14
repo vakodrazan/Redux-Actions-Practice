@@ -1,11 +1,15 @@
 import React from 'react';
+
+// containers
+import Users from "./containers/Users";
+
+// components
 import CounterButton from "./components/CounterButton";
-import SpecialTextBox from "./components/SpecialTextBox";
+import SpecialTextBox from "./containers/SpecialTextBox";
 import Counter from "./components/Counter";
-import SpecialText from "./components/SpecialText";
+import SpecialText from "./containers/SpecialText";
 import UserButtons from "./components/UserButtons";
 import Thermostat from "./components/Thermostat";
-import Users from "./components/Users";
 import ChangeTemperature from "./components/ChangeTemperature";
 import ImagePreview from "./components/ImagePreview";
 import ImageUrlTextBox from "./components/ImageUrlTextBox";

@@ -3,9 +3,7 @@ import SpecialText from "../components/SpecialText";
 
 //map a prop called text to the state specialText
 function mapStateToProps(state){
-  return {
-    text: state.specialText
-  }
+  return {}
 }
 
-export default connect(mapStateToProps)(SpecialText);
+export default connect(mapStateToProps, null)(SpecialText);

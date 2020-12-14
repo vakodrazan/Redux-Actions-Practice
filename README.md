@@ -14,16 +14,15 @@ This project is designed to help practice using redux actions to control data th
 Redux actions, reducers, store & containers. mapStateToProps and mapDispatchToProps.
 
 ### Objective
-* Use the inputs and buttons on the left side of the page to modify the UI on the right side of the page
+* Use the inputs and buttons on the left side of the page to modify the UI on the right side of the page.
 
 ### Evidence of Completion
-* Components inside `App.js` have been replaced by containers.
+* Every component inside `App.js` has been replaced by a container.
 
 ### Sub Objectives
   * Clicking on the button `Increase Counter By One` should increment the `Counter` by 1
   * Clicking on the button `Decrease Counter By One` should decrease the `Counter` by 1
   * Inputting text inside the `Enter Special Text` field display a value next to `Special Text`
-  * Right side of page should display users assigned to the `state` object in `state.js`
   * Inputting text inside the `name` field should filter users by first name
   * Selecting a sort option inside `Sort Users` should sort users by first or last name
   * Clicking on the button `Add User` should add a single user to the user list
@@ -35,10 +34,21 @@ Redux actions, reducers, store & containers. mapStateToProps and mapDispatchToPr
   * Clicking `Display Modal` should display the modal nested inside the `Modal` component
   * Do one thing at a time, save and refresh to check for errors
 
+### Sub Objective checklist
+* Create the desired action
+* Create or modify a reducer to handle the action
+* Create or modify a container to map the action to the desired component prop function
+* Create or modify a container to map the reducer state to the desired component prop
+* Replace components in `App.js` with appropriate containers
 
-###  Reducers
+### How to create Actions
+  * Locate the actions file in actions/index.js
+  * Create a action for each piece of state.
+  * Each action should return a `type` and `value` property
+
+###  How to create Reducers
   * Locate the reducers file in reducers/index.js
-  * Create a reducer for each piece of state listed below. Three examples are already provided in the file
+  * Create or modify reducer for each piece of state listed below.
     * currentCount,
     * currentCity,
     * searchText,
@@ -50,82 +60,59 @@ Redux actions, reducers, store & containers. mapStateToProps and mapDispatchToPr
     * users,
     * specialText
   * Reducers take 2 parameters: `state`, and `action`
-  * Each reducer should return a modified state based on action type
-  * Each reducer should return a default state
-  * Combine reducers and export
+  * Reducers should return a state value based on action type
+  * Reducers should return a default state value
+  * Reducers should be combined and exported
 
-### Create Actions
-  * Locate the actions file in actions/index.js
-  * Create a action for each piece of state.
-  * Each action should return a `type` and `value` property
-
-### Provide store to components
-  * In index.js:
-    * Import Provider from react-redux
-    * Import store from store.js
-    * Use Provider component to wrap App
-    * Make sure there is no whitespace between Provider and App
-    * Give Provider a prop “store” and the value of the store
-
-### Containers
+### How to create Containers
   * Leave the components alone and create containers to interact with your new Redux logic.
-  * In the container folder, create a container file for the following components:
-    * SpecialTextContainer.js
+  * In the `containers` folder, create a container file for the following components:
+    * SpecialText.js
       * map a prop called `text` to the state `specialText`
-    * UsersContainer.js
+    * Users.js
       * map a prop called `users` to the state `users`
       * map a prop called `firstNameFilter` to the state `searchText`
       * map a prop called `sortOn` to the state `currentUserSort`
-    * CounterContainer.js
+    * Counter.js
       * map a prop called `count` to the state `currentCount`
-    * CurrentCityContainer.js
+    * CurrentCity.js
       * map a prop called `text` to the state `currentCity`
-    * ThermostatContainer.js
+    * Thermostat.js
       * map a prop called `temp` to the state `currentTemp`
-    * ImagePreviewContainer.js
+    * ImagePreview.js
       * map a prop called `URL` to the state `imagrUrl`
       * map a prop called `scale` to the state `imageScale`
-    * ModalContainer.js
+    * Modal.js
       * map a prop called `displayModal` to the state `displayModal`
-    * UserButtonsContainer.js
-      * import `addUser` and `removeUser` action
-      * map prop `add` to action `addUser`
-      * map prop `remove` to action `removeUser`
-    * CityDropDownContainer.js
-      * import `setCurrentCity` action
-      * map prop `set` to action `setCurrentCity`
-    * CounterButtonContainer.js
-      * import the increaseCounter and decreaseCounter actions
-      * map prop `increase` to action `increaseCounter`
-      * map prop `decrease` to action `decreaseCounter`
-    * SearchTextBoxContainer.js
-      * import `setSearchText` action
-      * map prop `set` to action `setSearchText`
-    * ChangeTemperatureContainer.js
-      * import `setTemp` action
-      * map prop `set` to action `setTemp`
-    * ImageUrlTextBoxContainer.js
-      * import `setImageUrl` action
-      * map prop `set` to action `setImageUrl`
-    * SortUsersContainer.js
-      * import `setCurrentUserSort` action
-      * map prop `set` to action `setCurrentUserSort`
-    * ScaleImageContainer.js
-      * import `setImageScale` action
-      * map prop `set` to action `setImageScale`
-    * ShowModalContainer.js
-      * import `toggleModal` action
-      * map prop `toggleModal` to action `toggleModal` Show
-    * ModalContainer.js
-      * import `toggleModal` action
-      * map prop `toggleModal` to action `toggleModal`
-  * Import the appropriate component, actions and state props into the container file
-  * When needed, create a mapStateToProps function to map props to the appropriate state
-  * When needed, create a mapDispatchToProps object to map props to the appropriate actions
+    * UserButtons.js
+      * map prop `add` to `addUser` action
+      * map prop `remove` to `removeUser` action
+    * CityDropDown.js
+      * map prop `set` to `setCurrentCity` action
+    * CounterButton.js
+      * map prop `increase` to `increaseCounter` action
+      * map prop `decrease` to `decreaseCounter` action
+    * SearchTextBox.js
+      * map prop `set` to `setSearchText` action
+    * ChangeTemperature.js
+      * map prop `set` to action `setTemp` action
+    * ImageUrlTextBox.js
+      * map prop `set` to `setImageUrl`  action
+    * SortUsers.js
+      * map prop `set` to `setCurrentUserSort` action
+    * ScaleImage.js
+      * map prop `set` to action `setImageScale` action
+    * ShowModal.js
+      * map prop `toggleModal` to `toggleModal` action
+    * Modal.js
+      * map prop `toggleModal` to `toggleModal` action
+  * Import the appropriate component and actions into the container file
+  * Create a mapStateToProps function to map props to the appropriate state
+  * Create a mapDispatchToProps object to map props to the appropriate actions
   * Export the container using the react-redux `connect` function
 
 ### App
-  * Change App.js to use the containers you created instead of components
+  * Modify App.js to use the containers you created instead of components
 
 ### Bonus - Add Fetch
 Currently, the users are hard coded in the state.js file. Change that data so it is coming from an api. https://jsonplaceholder.typicode.com/users

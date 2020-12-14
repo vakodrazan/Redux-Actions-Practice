@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Users(props) {
-  var usersDivs = null;
+function Users({ users, sortOn, firstNameFilter }) {
+  let usersDivs = null;
+  let sorted = [];
 
-  if(props.users){
+  if(users){
 
-    let userNames = props.users.map(u => {
+    let userNames = users.map(u => {
       let nameArray = u.name.split(' ');
       return {
         'first_name': nameArray[0],
@@ -13,14 +14,16 @@ function Users(props) {
       }
     });
 
-    var sorted = userNames.sort((a,b) => {
-      return a[props.sortOn].localeCompare(b[props.sortOn]);
-    });
+    if(sortOn){
+      userNames = userNames.sort((a,b) => {
+        return a[sortOn].localeCompare(b[sortOn]);
+      });
+    }
 
-    usersDivs = sorted.filter(function(u){
-      return !props.firstNameFilter || 
-      (props.firstNameFilter && 
-      u.first_name.indexOf(props.firstNameFilter) > -1);
+    usersDivs = userNames.filter(function(u){
+      return !firstNameFilter || 
+      (firstNameFilter && 
+      u.first_name.indexOf(firstNameFilter) > -1);
     });
 
     usersDivs = usersDivs.map(function(u){

@@ -1,15 +1,7 @@
 // function that returns an action type and a text value
-export function setSpecialText(txt){
+export function setSpecialText(){
   return {
-    type:"SET_SPECIAL_TEXT",
-    value:txt
-  }
-}
-
-// function that returns an action type and a user value
-export function addUser(user){
-  return {
-    type:"ADD_USER",
-    value:user
+    type: null,
+    value: null
   }
 }
