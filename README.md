@@ -2,7 +2,7 @@
 ### Intro to Redux Actions
 This project is designed to help practice using redux actions to control data that is changed through user interactions. On the left hand side of the page is a collection of different inputs that are available on a web page. When the user interacts with the input it will change some data that should update the right hand side of the page. All you need to do is build the redux containers such that it will connect redux actions and data to the components. You do not need to alter the existing components themselves to complete this project.
 
-![screenshot](/public/img/screenshot.png)
+![screenshot1](/public/img/screenshot1.png)
 
 ### Setup
 * fork
