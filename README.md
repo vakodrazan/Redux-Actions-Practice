@@ -41,12 +41,12 @@ Redux actions, reducers, store & containers. mapStateToProps and mapDispatchToPr
 * Create or modify a container to map the reducer state to the desired component prop
 * Replace components in `App.js` with appropriate containers
 
-### How to create Actions
+### Actions
   * Locate the actions file in actions/index.js
   * Create a action for each piece of state.
   * Each action should return a `type` and `value` property
 
-###  How to create Reducers
+### Reducers
   * Locate the reducers file in reducers/index.js
   * Create or modify reducer for each piece of state listed below.
     * currentCount,
@@ -64,7 +64,7 @@ Redux actions, reducers, store & containers. mapStateToProps and mapDispatchToPr
   * Reducers should return a default state value
   * Reducers should be combined and exported
 
-### How to create Containers
+### Containers
   * Leave the components alone and create containers to interact with your new Redux logic.
   * In the `containers` folder, create a container file for the following components:
     * SpecialText.js
