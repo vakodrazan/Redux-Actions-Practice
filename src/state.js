@@ -4,10 +4,10 @@ export default{
   currentCity:"",
   searchText:"",
   currentTemp: 0,
-  isLoading: false,
-  videoURL: "",
+  displayModal: false,
+  imageUrl: "",
   currentUserSort:"first_name",
-  videoScale:1,
+  imageScale:1,
   users: [
   {
     "id": 1,

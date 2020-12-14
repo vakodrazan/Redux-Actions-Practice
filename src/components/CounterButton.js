@@ -1,22 +1,29 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 function CounterButton(props) {
   return (
       <div>
-        <button onClick={
+        <Button
+          variant="contained"
+          size="small"
+          onClick={
           ()=>{
             if(props.increase){
               props.increase();
             }
           }
-        }>Increase Counter By One</button>
-        <button onClick={
+        }>Increase Counter By One</Button>
+        <Button
+          variant="contained"
+          size="small"
+          onClick={
           ()=>{
             if(props.increase){
               props.decrease();
             }
           }
-        }>Decrease Counter By One</button>
+        }>Decrease Counter By One</Button>
       </div>
   );
 }

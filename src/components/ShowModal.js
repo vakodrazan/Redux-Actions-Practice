@@ -1,15 +1,19 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 function ShowModal(props) {
   return (
       <div>
-        <button onClick={
-          ()=>{
-            if(props.setIsLoading){
-              props.setIsLoading(true);
+        <Button
+          variant="contained"
+          color="primary"
+          size="small"
+          onClick={()=>{
+            if(props.toggleModal !== undefined){
+              props.toggleModal(true);
             }
           }
-        }>Show Modal</button>
+        }>Show Modal</Button>
 
       </div>
   );

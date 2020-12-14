@@ -1,9 +1,13 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 function UserButtons(props) {
   return (
       <div>
-        <button onClick={
+        <Button
+          variant="contained"
+          size="small"
+          onClick={
           ()=>{
             if(props.add){
               props.add({
@@ -16,14 +20,17 @@ function UserButtons(props) {
               });
             }
           }
-        }>Add User</button>
-        <button onClick={
+        }>Add User</Button>
+        <Button
+          variant="contained"
+          size="small"
+          onClick={
           ()=>{
             if(props.remove){
               props.remove()
             }
           }
-        }>Remove User</button>
+        }>Remove User</Button>
       </div>
   );
 }

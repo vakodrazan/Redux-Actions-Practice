@@ -1,24 +1,29 @@
 import React from 'react';
+import { InputLabel, Select, MenuItem } from '@material-ui/core';
 
 function CityDropDown(props) {
   return (
       <div>
-        CurrentCity: 
-        <select onChange={
+        <InputLabel id="label">Select Current City</InputLabel> 
+        <Select
+          labelId="label" 
+          id="select" 
+          value="Austin"
+          onChange={
           (e)=>{
             if(props.set){
               props.set(e.target.value);
             }
           }
-        }>
-          <option value="Austin">Austin</option>
-          <option value="New York">New York</option>
-          <option value="New Olreans">New Olreans</option>
-          <option value="Las Vegas">Las Vegas</option>
-          <option value="Seattle">Seattle</option>
-          <option value="San Fransisco">San Fransisco</option>
-          <option value="Washington D.C.">Washington D.C.</option>
-        </select>
+          }>
+          <MenuItem value="Austin">Austin</MenuItem>
+          <MenuItem value="New York">New York</MenuItem>
+          <MenuItem value="New Olreans">New Olreans</MenuItem>
+          <MenuItem value="Las Vegas">Las Vegas</MenuItem>
+          <MenuItem value="Seattle">Seattle</MenuItem>
+          <MenuItem value="San Fransisco">San Fransisco</MenuItem>
+          <MenuItem value="Washington D.C.">Washington D.C.</MenuItem>
+        </Select>
       </div>
   );
 }

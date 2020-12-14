@@ -4,9 +4,14 @@ body {
   font-family: sans-serif;
 }
 
-.container{
+.container {
   width: 33%;
-  height: 700px;
+  min-height: 100vh;
   border: solid black 2px;
   float:left;
+  overflow-y: scroll;
+}
+
+button {
+  margin: 10px !important;
 }

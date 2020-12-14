@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import Button from '@material-ui/core/Button';
 
 const customStyles = {
   content : {
@@ -12,21 +13,20 @@ const customStyles = {
   }
 };
 
-function LoadingModal(props) {
+function ModalTemplate(props) {
   return (
     <Modal
-      isOpen={props.isLoading}
+      isOpen={props.displayModal}
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <button onClick={
-        ()=>{
-          props.setIsLoading(false);
-        }
-        }>close</button>
-      <div>Loading .......</div>
+      <Button
+        variant="contained"
+        size="small"
+        onClick={()=>{props.toggleModal(false)}}>close</Button>
+      <div>I am a modal!</div>
 
     </Modal>
   );
 }
-export default LoadingModal;
+export default ModalTemplate;

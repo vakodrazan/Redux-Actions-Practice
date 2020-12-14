@@ -7,13 +7,13 @@ import UserButtons from "./components/UserButtons";
 import Thermostat from "./components/Thermostat";
 import Users from "./components/Users";
 import ChangeTemperature from "./components/ChangeTemperature";
-import VideoPlayer from "./components/VideoPlayer";
-import VideoTextBox from "./components/VideoTextBox";
+import ImagePreview from "./components/ImagePreview";
+import ImageUrlTextBox from "./components/ImageUrlTextBox";
 import CurrentCity from "./components/CurrentCity";
 import CityDropDown from "./components/CityDropDown";
 import SearchTextBox from "./components/SearchTextBox";
 import SortUsers from "./components/SortUsers";
-import ScaleVideo from "./components/ScaleVideo";
+import ScaleImage from "./components/ScaleImage";
 import Modal from "./components/Modal";
 import ShowModal from "./components/ShowModal";
 
@@ -21,9 +21,14 @@ function App() {
   return (
       <div className="App">
         <div className="container">
+          <h2>Inputs</h2>
           <CounterButton />
           <br />
           <SpecialTextBox />
+          <br/>
+          <SearchTextBox />
+          <br/>
+          <SortUsers />
           <br />
           <UserButtons />
           <br />
@@ -31,17 +36,14 @@ function App() {
            <br />
           <ChangeTemperature />
           <br />
-          <SearchTextBox />
+          <ImageUrlTextBox />
           <br />
-          <VideoTextBox />
-          <br />
-          <SortUsers />
-          <br />
-          <ScaleVideo />
+          <ScaleImage />
           <br />
           <ShowModal />
         </div>
         <div className="container">
+          <h2>Outputs</h2>
           <Counter />
           <br />
           <SpecialText />
@@ -50,12 +52,13 @@ function App() {
           <br />
           <Thermostat />
           <br />
-          <VideoPlayer />
+          <ImagePreview />
           <br />
           
           
         </div>
         <div className="container">
+          <h2>Users</h2>
           <Users />
         </div>
         <Modal />
