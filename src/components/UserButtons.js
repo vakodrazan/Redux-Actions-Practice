@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-function UserButtons(props) {
+function UserButtons({ add, remove }) {
   return (
       <div>
         <Button
@@ -9,8 +9,8 @@ function UserButtons(props) {
           size="small"
           onClick={
           ()=>{
-            if(props.add){
-              props.add({
+            if(add){
+              add({
                 "id": 1,
                 "name": "george bluth",
                 "address": "4116 Magnolia Drive, Portland, ME 04103",
@@ -26,8 +26,8 @@ function UserButtons(props) {
           size="small"
           onClick={
           ()=>{
-            if(props.remove){
-              props.remove()
+            if(remove){
+              remove()
             }
           }
         }>Remove User</Button>

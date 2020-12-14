@@ -1,20 +1,20 @@
 import React from 'react';
 
-function ImagePreview(props) {
+function ImagePreview({ scale, imageUrl}) {
   let width = 200;
   let height = 200;
-  if(props.scale){
-    width = 200 * props.scale;
-    height = 200 * props.scale;
+  if(scale){
+    width = 200 * scale;
+    height = 200 * scale;
   }
   return (
     <div>
       <div>Image Preview</div>
       <br/>
-      {props.URL &&
+      {imageUrl &&
         <img 
           alt="image preview"
-          src={props.URL}
+          src={imageUrl}
           width={width}
           height={height}/>}
     </div>

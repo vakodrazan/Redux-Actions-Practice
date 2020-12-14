@@ -13,17 +13,17 @@ const customStyles = {
   }
 };
 
-function ModalTemplate(props) {
+function ModalTemplate({ displayModal, toggleModal }) {
   return (
     <Modal
-      isOpen={props.displayModal}
+      isOpen={displayModal}
       style={customStyles}
       contentLabel="Example Modal"
     >
       <Button
         variant="contained"
         size="small"
-        onClick={()=>{props.toggleModal(false)}}>close</Button>
+        onClick={()=>{if(toggleModal) {toggleModal(false) }}}>close</Button>
       <div>I am a modal!</div>
 
     </Modal>

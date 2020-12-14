@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-function ImageUrlTextBox(props) {
+function ImageUrlTextBox({ set }) {
   return (
       <div>
         <div>Enter URL of image</div>
@@ -9,8 +9,8 @@ function ImageUrlTextBox(props) {
           type="string"
           label="url"
           onChange={(e)=>{
-          if(props.set){
-            props.set(e.target.value);
+          if(set){
+            set(e.target.value);
           }
         }}
         />

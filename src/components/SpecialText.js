@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SpecialText(props) {
+function SpecialText({ text }) {
   return (
       <div>
-        Special Text: {props.text ? props.text : "null"}
+        Special Text: {text ? text : "null"}
       </div>
   );
 }

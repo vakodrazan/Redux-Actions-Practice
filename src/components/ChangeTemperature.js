@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from '@material-ui/core/TextField';
 
-function ChangeTemperature(props){
+function ChangeTemperature({ set }){
     return(
       <div>
         <br/>
@@ -10,7 +10,7 @@ function ChangeTemperature(props){
             type="number"
             label="Temp"
             InputProps={{ inputProps: { max: 100, min: 0 }}}
-            onChange={(e)=>{if(props.set) props.set(e.target.value)}}
+            onChange={(e)=>{if(set) set(e.target.value)}}
           />
         </label>
       </div>

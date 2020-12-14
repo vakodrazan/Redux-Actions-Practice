@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CurrentCity(props) {
+function CurrentCity({ text }) {
   return (
       <div>
-        CurrentCity: {props.text ? props.text : "null"}
+        CurrentCity: {text ? text : "null"}
       </div>
   );
 }

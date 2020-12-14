@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 
 function Users({ users, sortOn, firstNameFilter }) {
   let usersDivs = null;
@@ -27,7 +28,7 @@ function Users({ users, sortOn, firstNameFilter }) {
     });
 
     usersDivs = usersDivs.map(function(u){
-      return <div>{u.first_name} {u.last_name}</div>
+      return <div key={uuid()}>{u.first_name} {u.last_name}</div>
     })
   }
   return (

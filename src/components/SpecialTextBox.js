@@ -1,14 +1,13 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField'
 
-function SpecialTextBox(props) {
+function SpecialTextBox({ set }) {
   return (
       <div>
         <div>Enter Special Text:</div>
         <TextField onChange={(e)=>{
-            console.log(props);
-            if(props.set){
-              props.set(e.target.value);
+            if(set){
+              set(e.target.value);
             }
         }} />
       </div>

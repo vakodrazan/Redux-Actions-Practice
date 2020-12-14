@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Counter(props) {
+function Counter({ count }) {
   return (
       <div>
-        Counter: {props.count !== undefined ? props.count : "null"}
+        Counter: {count !== undefined ? count : "null"}
       </div>
   );
 }

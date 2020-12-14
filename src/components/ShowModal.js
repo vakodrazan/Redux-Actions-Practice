@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-function ShowModal(props) {
+function ShowModal({ toggleModal }) {
   return (
       <div>
         <Button
@@ -9,8 +9,8 @@ function ShowModal(props) {
           color="primary"
           size="small"
           onClick={()=>{
-            if(props.toggleModal !== undefined){
-              props.toggleModal(true);
+            if(toggleModal){
+              toggleModal(true);
             }
           }
         }>Show Modal</Button>
