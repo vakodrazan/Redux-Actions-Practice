@@ -1,7 +1,7 @@
 export default{
   currentCount:0,
   specialText:"",
-  currentCity:"",
+  currentCity:"Austin",
   searchText:"",
   currentTemp: 0,
   displayModal: false,

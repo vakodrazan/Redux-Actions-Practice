@@ -1,14 +1,14 @@
 import React from 'react';
 import { InputLabel, Select, MenuItem } from '@material-ui/core';
 
-function SortUsers({ set }) {
+function SortUsers({ sortUsers, set }) {
   return (
       <div>
         <InputLabel id="label">Sort Users</InputLabel> 
         <Select
           labelId="label" 
           id="select" 
-          value="first_name" 
+          value={sortUsers}
           onChange={
             (e)=>{
               if(set){

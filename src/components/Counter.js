@@ -7,4 +7,5 @@ function Counter({ count }) {
       </div>
   );
 }
-export default Counter;
+
+export default Counter
