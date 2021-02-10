@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import Users from '../components/Users';
+import { getUsers } from "../actions"
 
 function mapStateToProps(state){
     return {
@@ -9,4 +10,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, null)(Users)
+export default connect(mapStateToProps, {getUsers})(Users)

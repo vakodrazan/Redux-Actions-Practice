@@ -9,6 +9,7 @@
     "react-modal": "^1.7.7",
     "react-redux": "*",
     "redux": "*",
+    "redux-thunk": "^2.3.0",
     "uuid": "3.3.3",
     "whatwg-fetch": "^2.0.3"
   },

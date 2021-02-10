@@ -1,10 +1,5 @@
 import { connect } from "react-redux"
 import CurrentCity from "../components/CurrentCity"
 
-function mapStateToProps(globalState) {
-    return {
-        text: globalState.currentCity
-    }
-}
 
-export default connect(mapStateToProps, null)(CurrentCity)
+export default connect( (globalState) => ({text: globalState.currentCity}), null)(CurrentCity)
